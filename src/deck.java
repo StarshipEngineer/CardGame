@@ -3,6 +3,8 @@ class Deck {
 	Card[] d;
 	
 	Deck(int s) {
-		size = s;
+		d = new Card[s]
 	}
+
+ void fill() {}
 }
