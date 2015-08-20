@@ -1,13 +1,12 @@
 import java.util.Random;
-import Card;
 
-class Deck {
+class IntDeck {
 	  /**/
     int size;
-	  Card[] d;
+	  int[] d;
 
     Deck(int s) {
-	      d = new Card[s];
+	      d = new int[s];
 	  }
 
     void shuffle() {
@@ -15,7 +14,7 @@ class Deck {
         Random r = new Random();
         for(int i = d.length-1; i > 0; i--) {
             int rand = r.nextInt(i);
-            Card temp = d[i];
+            int temp = d[i];
             d[i] = d[rand];
             d[rand] = temp;
         }
