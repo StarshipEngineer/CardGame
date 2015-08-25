@@ -35,7 +35,7 @@ class IntDeck {
       }
 
     void shuffle() {
-              /**/
+        /**/
         Random r = new Random();
         for(int i = d.length-1; i > 0; i--) {
             int rand = r.nextInt(i);
