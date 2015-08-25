@@ -24,12 +24,14 @@ class Test {
 
 
 class IntDeck {
-      /**/
+    /**/
     int size;
-      int[] d;
+    int[] d;
+    int getloc, putloc;
 
     IntDeck(int s) {
           d = new int[s];
+          getloc = putloc = 0;
       }
 
     void shuffle() {
@@ -41,5 +43,21 @@ class IntDeck {
             d[i] = d[rand];
             d[rand] = temp;
         }
+    }
+
+    void put(int i) {
+        if (putloc == d.length) {
+            System.out.println(" - Deck is full.");
+        }
+        // make expandable
+        d[putloc++] = i;
+    }
+
+    int Draw() {
+        if (getloc == putloc) {
+            System.out.println(" - Deck is empty.");
+            return 0;
+        }
+        return d[getloc++];
     }
 }
