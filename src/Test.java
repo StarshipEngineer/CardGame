@@ -6,18 +6,18 @@ class Test {
     
         IntDeck i = new IntDeck(s);
         for(int n = 0; n < s; n++){
-            i[n] = n;
+            i.put(n);
         }
     
         for(int n = 0; n < s; n++){
-            System.out.println(i[n]);
+            System.out.println(i.get());
         }
     
         System.out.println();
     
         i.shuffle();
         for(int n = 0; n < s; n++){
-            System.out.println(i[n]);
+            System.out.println(i.get());
         }
     }
 }
